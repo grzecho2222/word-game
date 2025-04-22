@@ -1,0 +1,33 @@
+"""
+author: Grzegorz 
+task: word game
+"""
+
+import random
+
+round = 1
+wordlist = ("always column	degree amount combat	demand animal	coming	depend annual	common	deputy".split())
+fun = "yes"
+
+while fun =="yes":
+    print (" Round ",round)
+    word = random.choice(wordlist)
+    print (" Try to guess six letter word ")
+    guesses = 1
+    playerguess =input(" Write your guess ").lower()
+    
+    while word != playerguess:
+        guesses = guesses + 1
+        if playerguess == word:
+            print (" Correct! ")
+        else:
+            print (" Wrong! ")
+            cor= len([char for char in set(word.lower())
+             if char in set(playerguess.lower())])
+            print(" You have ", cor, " correct letters " )
+            playerguess =input(" Write your new guess ").lower()
+
+    print (" You won! It took you ", guesses, " guesses ")
+    print (" Do you want to play another round? ")
+    fun =input(" yes or no ").lower()
+    round = round + 1
