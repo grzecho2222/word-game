@@ -27,7 +27,11 @@ while fun =="yes":
             print(" You have ", cor, " correct letters " )
             playerguess =input(" Write your new guess ").lower()
 
+
     print (" You won! It took you ", guesses, " guesses ")
     print (" Do you want to play another round? ")
     fun =input(" yes or no ").lower()
     round = round + 1
+
+input("Press enter and exit")
+exit()
